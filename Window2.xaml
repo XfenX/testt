@@ -1,0 +1,31 @@
+﻿<Window x:Class="lab2.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:lab2"
+        mc:Ignorable="d"
+        Title="Window2" Height="450" Width="800">
+    <Grid Background="Purple">
+        <StackPanel>
+            <TextBlock Width="50" Background="Purple" HorizontalAlignment="Left" >Цвета</TextBlock>
+            <ComboBox  Width="80" HorizontalAlignment="Left" >
+                <ComboBoxItem Selected="ComboBoxItem_Selected" >Красный</ComboBoxItem>
+                <ComboBoxItem Selected="ComboBoxItem_Selected_1">Зелёный</ComboBoxItem>
+                <ComboBoxItem Selected="ComboBoxItem_Selected_2">Синий</ComboBoxItem>
+            </ComboBox>
+            <RadioButton VerticalAlignment="Stretch"  Height="20" Width="80" HorizontalAlignment="Left" Content="Рисование" Checked="RadioButton_Checked_1" ></RadioButton>
+            <RadioButton VerticalAlignment="Stretch"  Height="20" Width="114" HorizontalAlignment="Left"  Content="Редактирвание" Checked="RadioButton_Checked_2" ></RadioButton>
+            <RadioButton VerticalAlignment="Stretch"  Height="20" Width="114" HorizontalAlignment="Left"  Content="Удаление" Checked="RadioButton_Checked" ></RadioButton>
+            <TextBlock Width="50" Background="Purple" HorizontalAlignment="Left">Размер</TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <Slider x:Name="be" Minimum="1" Maximum="25" Value="10" Width="100" ValueChanged="Slider_ValueChanged" HorizontalAlignment="Left" />
+                <TextBlock Name="val"  TextWrapping="Wrap">10</TextBlock>
+            </StackPanel>
+            <InkCanvas Name="abc" Height="1826">
+
+            </InkCanvas>
+        </StackPanel>
+
+    </Grid>
+</Window>
